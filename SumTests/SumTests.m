@@ -15,7 +15,11 @@
 @implementation SumTests
 
 int sum(int fromN, int toN) {
-    return 0;
+    if (fromN == toN) {
+        return toN;
+    }
+    
+    return fromN + sum(fromN+1, toN);
 }
 
 - (void)testSumFunction {
